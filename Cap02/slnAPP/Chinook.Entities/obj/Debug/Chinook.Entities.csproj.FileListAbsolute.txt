@@ -1,0 +1,5 @@
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinook.Entities\bin\Debug\Chinook.Entities.dll
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinook.Entities\bin\Debug\Chinook.Entities.pdb
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.csproj.CoreCompileInputs.cache
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.dll
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.pdb

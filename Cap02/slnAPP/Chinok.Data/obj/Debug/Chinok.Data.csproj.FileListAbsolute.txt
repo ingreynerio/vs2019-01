@@ -1,0 +1,9 @@
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinok.Data\obj\Debug\Chinok.Data.csprojAssemblyReference.cache
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinok.Data\obj\Debug\Chinok.Data.csproj.CoreCompileInputs.cache
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinok.Data\bin\Debug\Chinok.Data.dll
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinok.Data\bin\Debug\Chinok.Data.pdb
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinok.Data\bin\Debug\Chinook.Entities.dll
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinok.Data\bin\Debug\Chinook.Entities.pdb
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinok.Data\obj\Debug\Chinok.Data.csproj.CopyComplete
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinok.Data\obj\Debug\Chinok.Data.dll
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinok.Data\obj\Debug\Chinok.Data.pdb
