@@ -1,0 +1,193 @@
+BEGIN
+	SELECT Name, ArtistId
+	FROM Artist WITH(NOLOCK)
+	WHERE ArtistId = @ArtistId 
+END
+GO
+
+SELECT TOP 15 * 
+FROM Artist 
+--with(NOLOCK)
+order by ArtistId desc
+
+código para bloquear el mensaje error
+
+
+---------------------------------------------------------------
+
+USE [Chinook]
+GO
+
+/****** Object:  StoredProcedure [dbo].[usp_DeleteArtist]    Script Date: 2/03/2019 04:24:28 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE PROCEDURE [dbo].[usp_DeleteArtist]
+(
+	@Id INT
+)
+AS
+BEGIN
+	DELETE
+	FROM Artist
+	WHERE ArtistId = @Id
+END
+GO
+
+
+------------------------------------------------------------
+
+
+
+ALTER PROCEDURE [dbo].[usp_getAlbunesVendidos]
+AS
+BEGIN
+SELECT        
+	 dbo.Playlist.Name AS PlaylistName, 
+	 dbo.Track.Name AS TrackName,
+	 dbo.Album.Title AS AlbumName, 
+	 dbo.Artist.Name AS ArtistName, 
+	 SUM(dbo.InvoiceLine.Quantity) as TotalQuantity
+FROM            dbo.Album INNER JOIN
+    dbo.Artist ON dbo.Album.ArtistId = dbo.Artist.ArtistId INNER JOIN
+    dbo.Invoice INNER JOIN
+    dbo.Customer ON dbo.Invoice.CustomerId = dbo.Customer.CustomerId INNER JOIN
+    dbo.InvoiceLine ON dbo.Invoice.InvoiceId = dbo.InvoiceLine.InvoiceId INNER JOIN
+    dbo.PlaylistTrack INNER JOIN
+    dbo.Playlist ON dbo.PlaylistTrack.PlaylistId = dbo.Playlist.PlaylistId INNER JOIN
+    dbo.Track ON dbo.PlaylistTrack.TrackId = dbo.Track.TrackId 
+	ON dbo.InvoiceLine.TrackId = dbo.Track.TrackId ON dbo.Album.AlbumId = dbo.Track.AlbumId
+GROUP BY 
+	dbo.Playlist.Name, 
+	dbo.Track.Name,	 
+	 dbo.Album.Title, 
+	 dbo.Artist.Name
+ORDER BY dbo.Playlist.Name ASC,
+		dbo.Track.Name ASC,
+		dbo.Album.Title ASC, 
+	 dbo.Artist.Name ASC
+
+END
+GO
+
+
+
+
+--------------------------------------------------------
+
+ALTER PROCEDURE [dbo].[usp_GetArtists]
+(
+	@FiltroByName NVARCHAR(100)
+)
+AS
+BEGIN
+	SELECT 
+		[Name], 
+		ArtistId
+	FROM Artist WITH(NOLOCK)
+	WHERE [Name] LIKE @FiltroByName
+END
+GO
+
+
+------------------------------------------------------
+
+
+ALTER PROCEDURE [dbo].[usp_GetListByName]
+(
+	@Name NVARCHAR(120)
+)
+AS
+BEGIN
+/****** Script for SelectTopNRows command from SSMS  ******/
+	SELECT [ArtistId]
+      ,[Name]
+  FROM [Chinook].[dbo].[Artist]
+  WHERE Name like @Name
+
+END
+GO
+
+
+--------------------------------------------------------
+
+ALTER PROCEDURE [dbo].[usp_GetTracks]
+(
+	@trackName NVARCHAR(100)
+)
+AS
+BEGIN
+SELECT        
+	C.TrackId, C.Name AS TrackName, 
+	C.AlbumId, A.Title, 
+	A.ArtistId, B.Name AS ArtistName, 
+	C.MediaTypeId, D.Name AS MediaTypeName, 
+	C.Composer, C.Milliseconds, 
+    C.Bytes, C.UnitPrice
+FROM    dbo.Album AS A INNER JOIN
+	dbo.Artist AS B ON A.ArtistId = B.ArtistId INNER JOIN
+	dbo.Track AS C ON A.AlbumId = C.AlbumId INNER JOIN
+	dbo.MediaType AS D ON C.MediaTypeId = D.MediaTypeId
+WHERE @trackName IS NULL OR C.Name LIKE @trackName
+END
+GO
+
+
+----------------------------------------------------
+
+
+ALTER PROCEDURE [dbo].[usp_InsertArtist]
+(
+	@Name NVARCHAR(120)
+)
+AS
+BEGIN
+
+	INSERT INTO Artist([Name])
+	VALUES(@Name)
+	
+	SELECT SCOPE_IDENTITY()
+END
+GO
+
+
+-----------------------------------------------------
+
+ALTER PROCEDURE [dbo].[usp_UpdatetArtist]
+(
+	@ArtistId NVARCHAR(120)
+)
+AS 
+BEGIN
+	SELECT Name, ArtistId
+	FROM Artist WITH(NOLOCK)
+	WHERE ArtistId = @ArtistId 
+END
+GO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

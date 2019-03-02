@@ -1,0 +1,16 @@
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinook.Entities\bin\Debug\Chinook.Entities.dll
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinook.Entities\bin\Debug\Chinook.Entities.pdb
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.csproj.CoreCompileInputs.cache
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.dll
+D:\vs2019_01\vs2019-01\Cap02\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.pdb
+D:\GitHub\vs2019-01\Cap02\slnAPP\Chinook.Entities\bin\Debug\Chinook.Entities.dll
+D:\GitHub\vs2019-01\Cap02\slnAPP\Chinook.Entities\bin\Debug\Chinook.Entities.pdb
+D:\GitHub\vs2019-01\Cap02\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.csprojAssemblyReference.cache
+D:\GitHub\vs2019-01\Cap02\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.csproj.CoreCompileInputs.cache
+D:\GitHub\vs2019-01\Cap02\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.dll
+D:\GitHub\vs2019-01\Cap02\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.pdb
+C:\repos\slnAPP\Chinook.Entities\bin\Debug\Chinook.Entities.dll
+C:\repos\slnAPP\Chinook.Entities\bin\Debug\Chinook.Entities.pdb
+C:\repos\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.csproj.CoreCompileInputs.cache
+C:\repos\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.dll
+C:\repos\slnAPP\Chinook.Entities\obj\Debug\Chinook.Entities.pdb
